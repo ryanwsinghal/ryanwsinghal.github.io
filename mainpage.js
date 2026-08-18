@@ -1,2 +1,4 @@
-alert("Hi!")
-alert("Welcome to my website! 😀")
+setTimeout(()=>{
+    alert("Hi!")
+    alert("Welcome to my website! 😀")
+},1000)
