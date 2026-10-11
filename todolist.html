@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>To-do list | Ryan's first website</title>
+        <style>
+            input[type="button"] {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+        <link rel="icon" type="image/png" href="Ryan's_first_website_logo.png">
+        <script>
+            function addItem() {
+                var newItem = document.createElement("div");
+                newItem.innerHTML = document.getElementById("itemBox").value;
+                document.getElementById("list").appendChild(newItem);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Your to-do list</h1>
+        <input type="text" id="itemBox" value="New item"/>
+        <br>
+        <input type="button" value="Add item" onclick="addItem();"/>
+        <br>
+        <div id="list"></div>
+    </body>
+</html>
