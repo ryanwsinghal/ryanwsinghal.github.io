@@ -1,12 +1,25 @@
 <html>
 <head>
-    <title>Ryan's first website</title>
+    <title>PASSWORD</title>
     <link rel="icon" type="image/png" href="Ryan's_first_website_logo.png">
+    <script>
+        function checkPassword() {    
+            var password = document.getElementById("passwordBox");
+            var passwordText = password.value;
+            if(passwordText == "1423") {
+                return true;
+            }
+            alert("Incorrect password")
+            return false
+        }
+    </script>
 </head>
 <body>
-    <h1>Hello</h1>
-    <p>This is fun<br>but python is more fun</p>
-    <h1>Do I know you?</h1>
-    <button onclick="alert('Hello')">Hi</button>
+    <h1>Hello!</h1>
+    <p>This is my website.</p>
+    <p>Password:<input id="passwordBox" type="password"/></p>
+    <p>
+        <a href="unlockedpage.html" onclick="return checkPassword();">Click here</a> to submit password.
+    </p>
 </body>
 </html>
