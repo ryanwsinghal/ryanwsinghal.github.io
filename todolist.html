@@ -12,7 +12,17 @@
             function addItem() {
                 var newItem = document.createElement("div");
                 newItem.innerHTML = document.getElementById("itemBox").value;
+                newItem.onclick = removeitem;
                 document.getElementById("list").appendChild(newItem);
+            }
+            function removeitem() {
+                document.getElementById("list").removeChild(this);
+            }
+            function saveList() {
+                localStorage.storedList = document.getElementById("list").innerHTML;
+            }
+            function loadList() {
+                document.getElementById("list").innerHTML = localStorage.storedList;
             }
         </script>
     </head>
@@ -22,9 +32,12 @@
         <br>
         <input type="button" value="Add item" onclick="addItem();"/>
         <br>
+        <input type="button" value="Load item(s)" onclick="loadList()"/>
+        <br>
+        <input type="button" value="Save this list" onclick="saveList()"/>
+        <br>
         <div id="list"></div>
         <p>To go back to the main page, <a href="unlockedpage.html">click here</a>.</p>
         <p>To lock the page, <a href="index.html">click here</a>.</p>
-        <p>To clear the page, <a href="todolist.html">click here</a>.</p>
     </body>
 </html>
