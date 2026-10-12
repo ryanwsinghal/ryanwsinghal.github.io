@@ -1,12 +1,6 @@
 <html>
     <head>
         <title>To-do list | Ryan's first website</title>
-        <style>
-            input[type="button"] {
-                background-color: #000;
-                color: #fff;
-            }
-        </style>
         <link rel="icon" type="image/png" href="Ryan's_first_website_logo.png">
         <script>
             function addItem() {
@@ -30,11 +24,11 @@
         <h1>Your to-do list</h1>
         <input type="text" id="itemBox" placeholder="New item"/>
         <br>
-        <input type="button" value="Add item" onclick="addItem();"/>
+        <input type="button" value="Add item" onclick="addItem();" style="background-color: #000; color: #fff;"/>
         <br>
-        <input type="button" value="Load item(s)" onclick="loadList()"/>
+        <input type="button" value="Load item(s)" onclick="loadList()" style="background-color: #fff; color: #000;"/>
         <br>
-        <input type="button" value="Save this list" onclick="saveList()"/>
+        <input type="button" value="Save this list" onclick="saveList()" style="background-color: #00f; color: #fff;"/>
         <br>
         <div id="list"></div>
         <p>To go back to the main page, <a href="unlockedpage.html">click here</a>.</p>
